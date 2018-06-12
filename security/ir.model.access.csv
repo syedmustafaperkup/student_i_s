@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sis_teacher,Teacher,model_student_i_s_teacher,sis_group_teacher,1,1,0,0
+sis_teacher01,Teacher01,model_student_i_s_student,sis_group_teacher,1,0,0,0
+sis_teacher02,Teacher02,model_student_i_s_course,sis_group_teacher,1,1,1,0
+sis_teacher03,Teacher03,model_student_i_s_assign,sis_group_teacher,1,1,1,0
+sis_student,Student,model_student_i_s_student,sis_group_student,1,0,0,0
+sis_student01,Student,model_student_i_s_course,sis_group_student,1,0,0,0
+sis_student02,Student,model_student_i_s_teacher,sis_group_student,1,0,0,0
+sis_assigner,Assigner,model_student_i_s_course,sis_group_assigner,1,0,0,0
+sis_assigner02,Assigner02,model_student_i_s_student,sis_group_assigner,1,1,1,1
+sis_assigner03,Assigner03,model_student_i_s_teacher,sis_group_assigner,1,1,1,1
+sis_assigner04,Assigner04,model_student_i_s_assign,sis_group_assigner,1,1,1,1
+sis_course,Course,model_student_i_s_course,sis_group_course,1,1,1,1

@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+  
+    <record model="ir.actions.act_window" id="action_student">
+        <field name="name">Student</field>
+        
+        <field name="res_model">student_i_s.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_teacher">
+        <field name="name">Teacher</field>
+        
+        <field name="res_model">student_i_s.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_course">
+        <field name="name">Course</field>
+        <field name="specialty_id"/>
+        
+        <field name="res_model">student_i_s.course</field>
+        <field name="view_mode">tree,form</field>
+        <field name="specialty_id"/>
+
+    </record>
+
+    <record  model="ir.actions.act_window" id="action_assign">
+            <field  name="name" >Course Assign</field>
+            <field name="student_id"/>
+            <field name="course_id"/>
+     <!--   <field groups="student_i_s.sis_group_teacher" name="name">Course Assign</field>-->
+        <field name="res_model">student_i_s.assign</field>
+        <field name="view_mode">tree,form</field>
+        
+        
+    </record>
+   <!--  <group>
+                            <field name="price" groups="plant_nursery.plant_group_manager"/>
+                        </group> -->
+
+  <menuitem name="Student Information System" id="student_root_menu"/>
+
+   <menuitem name="Student" id="student_menu"
+              parent="student_root_menu"
+              action ="action_student"
+              sequence="1"/>
+
+     <menuitem name="Teacher" id="teacher_menu"
+              parent="student_root_menu"
+              action ="action_teacher"
+              sequence="2"/>
+      <menuitem name="Courses" id="course_menu"
+              parent="student_root_menu"
+              action ="action_course"
+              sequence="3"/>
+              <!--groups="student_i_s.sis_group_teacher"-->
+        <menuitem  name="Course Assign" id="assign_menu"
+              parent="student_root_menu"
+              action ="action_assign"
+              sequence="4"/> 
+  </data>
+</odoo>
