@@ -13,6 +13,11 @@ from odoo import models, fields, api
 #     @api.depends('value')
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
+class Teacher(models.Model):
+    _name = 'student_i_s.teacher'
+    name = fields.Char()
+    qualification = fields.Char()
+    specialty = fields.Char()
 
 class Student(models.Model):
     _name = 'student_i_s.student'
@@ -20,12 +25,6 @@ class Student(models.Model):
     fname = fields.Char()
     age = fields.Integer()
     address = fields.Char()
-
-class Teacher(models.Model):
-    _name = 'student_i_s.teacher'
-    name = fields.Char()
-    qualification = fields.Char()
-    specialty = fields.Char()
 
 class Course(models.Model):
     _name = 'student_i_s.course'
